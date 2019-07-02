@@ -60,39 +60,39 @@ function updateForecast(json) {
 
           switch (iconID) {
                case "01d":
-                    card.style.backgroundImage = "url('./../img/01d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/01d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-sun"></i>';
                     break;
                case "02d":
-                    card.style.backgroundImage = "url('./../img/02d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/02d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-cloud-sun"></i>';
                     break;
                case "03d":
-                    card.style.backgroundImage = "url('./../img/03d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/03d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-cloud"></i>';
                     break;
                case "04d":
-                    card.style.backgroundImage = "url('./../img/04d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/04d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-smog"></i>';
                     break;
                case "09d":
-                    card.style.backgroundImage = "url('./../img/09d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/09d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-cloud-showers-heavy"></i>';
                     break;
                case "10d":
-                    card.style.backgroundImage = "url('./../img/10d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/10d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-cloud-sun-rain"></i>';
                     break;
                case "11d":
-                    card.style.backgroundImage = "url('./../img/11d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/11d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-bolt"></i>';
                     break;
                case "13d":
-                    card.style.backgroundImage = "url('./../img/13d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/13d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-snowflake"></i>';
                     break;
                case "50d":
-                    card.style.backgroundImage = "url('./../img/50d.jpg')";
+                    card.style.backgroundImage = "url('./assets/img/50d.jpg')";
                     iconCards[i].innerHTM = '<i class="fas fa-stream"></i>';
                     break;
           }
