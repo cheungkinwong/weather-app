@@ -1,10 +1,10 @@
 html {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
 }
 body {
   width: 100%;
-  max-width: 1280px;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
@@ -26,11 +26,54 @@ body {
   justify-content: center;
 }
 .day {
-  width: 200px;
-  height: 200px;
-  margin: 1em;
-  background: #ffffff;
-  opacity: 0.3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(4px);
+  width: 330px;
+  height: 100%;
+
+  .cardContainer {
+    width: 300px;
+    height: 555px;
+    background: #ffffff4b;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    margin: 1em;
+    padding: 1em;
+
+    .city {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    .time {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    .icon {
+      font-size: 24px;
+      line-break: 60px;
+    }
+    .description {
+      font-size: 24px;
+    }
+    .temp {
+      font-size: 100px;
+    }
+    .tempMin,
+    .tempMax {
+      font-size: 24px;
+    }
+    .humidity,
+    .wind,
+    .cloud {
+      font-size: 24px;
+    }
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container {
+    height: 100%;
+    width: 100%;
+    background: url("./../img/rain.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+  }
 }
