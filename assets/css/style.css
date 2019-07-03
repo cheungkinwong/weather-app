@@ -1,15 +1,16 @@
 html {
   font-family: "Roboto", sans-serif;
-  color: #fff;
+  color: white;
   text-align: center;
 }
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
   text-align: center;
   margin: 0 auto;
-  background: #6494c0;
+  background: #648eb6;
 }
 
 input {
@@ -20,12 +21,27 @@ input {
   margin-bottom: 2em;
 }
 
+.container-opacity {
+  justify-items: center;
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  margin: 0 auto;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+}
+
 .container {
   justify-items: center;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
-  background-position: 100% 100%;
   background-size: cover;
+  margin: 0 auto;
 }
 
 .container .weatherCards {
@@ -51,7 +67,7 @@ input {
 .container .weatherCards .day .cardContainer {
   width: 300px;
   height: 555px;
-  background: rgba(50, 49, 83, 0.116);
+  background: rgba(255, 255, 255, 0);
   padding: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -59,7 +75,7 @@ input {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  text-shadow: 2px 2px 5px #4b4b4b;
+  text-shadow: 2px 2px 2px #4b4b4b;
 }
 
 .container .weatherCards .day .cardContainer .city {
@@ -123,17 +139,41 @@ input {
   margin: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  input {
-    width: 60%;
+@media only screen and (max-width: 1830px) {
+  .weatherCards {
+    width: 1200px;
   }
 }
 
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 1200px) {
+  .weatherCards {
+    width: 850px;
+  }
   input {
-    width: 80%;
+    width: 60%;
     margin-top: 1em;
     margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .weatherCards {
+    width: 350px;
+  }
+  input {
+    width: 80%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  input {
+    width: 80%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */

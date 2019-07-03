@@ -1,5 +1,5 @@
 const input = document.getElementById("inputCity");
-const background = document.querySelector(".container");
+const background = document.querySelector(".container-opacity");
 const weatherCardsContainer = document.querySelector(".weatherCards");
 const weatherCards = document.querySelectorAll(".day");
 const cityCards = document.querySelectorAll(".city");
@@ -22,23 +22,22 @@ input.addEventListener("keyup", key => {
           getWeather(cityName);
           getBackground(cityName);
           weatherCardsContainer.style.display = "flex";
+          document.body.style.background = "rgb(255,255,255)";
      }
 });
 
 //sent request for json unsplash
 async function getBackground(cityName) {
-     let request = `https://api.unsplash.com/search/photos?client_id=${unsplashKey}&page=1&query=${cityName}`;
+     let request = `https://api.unsplash.com/search/photos?client_id=${unsplashKey}&fm=jpg&auto=format,compress&page=1&query=${cityName}`;
      let response = await fetch(request);
      let jsonUnsplash = await response.json();
-     console.log(jsonUnsplash, "lol");
      await updateBackground(jsonUnsplash);
 }
 
 //will update background with an image from the city
 function updateBackground(jsonUnsplash) {
-     let backgroundUrl = jsonUnsplash.results[0].urls.full;
+     let backgroundUrl = jsonUnsplash.results[0].urls.regular;
      background.style.backgroundImage = `url('${backgroundUrl}')`;
-     console.log(backgroundUrl);
 }
 
 //sent request for json weather
