@@ -42,7 +42,7 @@ function updateBackground(jsonUnsplash) {
 
 //sent request for json weather
 async function getWeather(cityName) {
-     let request = `http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=${APIkey}`;
+     let request = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=${APIkey}`;
      let response = await fetch(request);
      let json = await response.json();
      await updateForecast(json);
