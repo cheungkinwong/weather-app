@@ -5,12 +5,11 @@ html {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   text-align: center;
   margin: 0 auto;
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#dadada), to(#008eb9));
-  background-image: linear-gradient(to bottom right, #dadada, #008eb9);
+  background: #6494c0;
 }
 
 input {
@@ -30,9 +29,7 @@ input {
 }
 
 .container .weatherCards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin: auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -42,6 +39,8 @@ input {
 }
 
 .container .weatherCards .day {
+  width: 330px;
+  height: 100%;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(10px);
@@ -52,8 +51,7 @@ input {
 .container .weatherCards .day .cardContainer {
   width: 300px;
   height: 555px;
-  background: #ffffff4b;
-  background-size: 100%;
+  background: rgba(50, 49, 83, 0.116);
   padding: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -61,6 +59,7 @@ input {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  text-shadow: 2px 2px 5px #4b4b4b;
 }
 
 .container .weatherCards .day .cardContainer .city {
@@ -122,5 +121,19 @@ input {
 .container .weatherCards .day .cardContainer .bottom .cloud {
   font-size: 24px;
   margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  input {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  input {
+    width: 80%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 /*# sourceMappingURL=style.css.map */
