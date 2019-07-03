@@ -34,6 +34,7 @@ async function getBackground(cityName) {
      await updateBackground(jsonUnsplash);
 }
 
+//will update background with an image from the city
 function updateBackground(jsonUnsplash) {
      let backgroundUrl = jsonUnsplash.results[0].urls.full;
      background.style.backgroundImage = `url('${backgroundUrl}')`;
