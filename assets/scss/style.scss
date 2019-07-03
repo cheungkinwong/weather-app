@@ -31,8 +31,8 @@ input {
           justify-content: center;
 
           .day {
-               width: 330px;
-               height: 100%;
+               // width: 330px;
+               // height: 100%;
                box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
                backdrop-filter: blur(10px);
                margin: 1em;
@@ -41,6 +41,7 @@ input {
                     width: 300px;
                     height: 555px;
                     background: #ffffff4b;
+                    background-size: 100%;
                     padding: 1em;
                     align-items: center;
                     display: grid;
@@ -55,8 +56,9 @@ input {
                          line-height: 30px;
                     }
                     .icon {
-                         font-size: 24px;
+                         font-size: 100px;
                          line-break: 60px;
+                         object-fit: cover;
                     }
                     .description {
                          font-size: 24px;

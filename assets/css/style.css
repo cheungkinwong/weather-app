@@ -42,8 +42,6 @@ input {
 }
 
 .container .weatherCards .day {
-  width: 330px;
-  height: 100%;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
           box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   -webkit-backdrop-filter: blur(10px);
@@ -55,6 +53,7 @@ input {
   width: 300px;
   height: 555px;
   background: #ffffff4b;
+  background-size: 100%;
   padding: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -75,8 +74,10 @@ input {
 }
 
 .container .weatherCards .day .cardContainer .icon {
-  font-size: 24px;
+  font-size: 100px;
   line-break: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .container .weatherCards .day .cardContainer .description {
